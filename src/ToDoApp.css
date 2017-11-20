@@ -1,0 +1,12 @@
+.to-do-app {
+  text-align: center;
+}
+
+label {
+  display: block;
+}
+
+
+ul {
+  list-style-type: none;
+}
