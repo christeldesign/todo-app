@@ -29,8 +29,10 @@ class ToDoApp extends React.Component {
     event.preventDefault();
     // If input is empty...
     if (this.state.value === '') {
-      alert('Please enter an item to add to your To Do List!');
+      this.setState({ errorMessage: 'Please enter an item to add to your To Do List' })
     } else {
+      // Erase error message...
+      this.setState({ errorMessage: '' });
       // Add submitted item to end of array
       this.setState({ toDoList: [...this.state.toDoList, this.state.value] });
     }
@@ -38,9 +40,10 @@ class ToDoApp extends React.Component {
 
   render () {
     return (
-      <div class='to-do-app'>
+      <div className='to-do-app'>
         <h1>To Do App</h1>
-        <p class='instructions'>Enter To Do Items in the field below, and click "Add" to add it to your list. When you have completed an item, delete it by checking off the checkbox.</p>
+        <p>Enter To Do Items in the field below, and click "Add" to add it to your list. When you have completed an item, delete it by checking off the checkbox.</p>
+        <p className='error-message'>{this.state.errorMessage}</p>
         <input type='text'
                  value={this.state.value}
                  onChange={this.handleChange} />

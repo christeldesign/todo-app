@@ -1,7 +1,7 @@
 
 .to-do-app {
   width: 25em;
-  min-height: 50vh;
+  min-height: 75vh;
   margin: 0 auto;
   padding: 2em 3em;
   margin-top: 1em;
@@ -16,15 +16,25 @@
 
 h1 {
   text-align: center;
-  margin-bottom: 1.2em;
+  margin-bottom: 1.1em;
 }
 
-.instructions {
+p {
   color: grey;
   font-style: italic;
   line-height: 1.4;
-  text-align: center;
   margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.error-message {
+  color: salmon;
+  font-weight: bold;
+}
+
+.nothing {
+  text-align: left;
+  color: lightgrey;
 }
 
 label {
@@ -65,7 +75,11 @@ ul {
 }
 
 li {
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #eee;
+}
+
+li:last-of-type {
+  border-bottom: none;
 }
 
 input[type='checkbox']{

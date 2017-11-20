@@ -20,11 +20,16 @@ class ToDoList extends React.Component {
     this.setState({ toDoList: this.props.ToDoList });
   }
 
+
   render () {
+
     return (
-      <div class='to-do-list'>
-        <h2>To Do List:</h2>
+      <div className='to-do-list'>
+        <h2>To Do List</h2>
         <ul>
+          {this.props.toDoList.length < 1 &&
+            <p className='nothing'>Nothing here yet</p>
+          }
           {this.props.toDoList.map((toDoListItem) =>
             <li key= {toDoListItem}>
               <input type='checkbox'
