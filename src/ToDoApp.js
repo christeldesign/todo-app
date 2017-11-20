@@ -18,6 +18,7 @@ class ToDoApp extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
   // Function to attach input value to state
   handleChange (event) {
     this.setState({ value: event.target.value });
@@ -39,6 +40,10 @@ class ToDoApp extends React.Component {
   }
 
   render () {
+
+    // Set document title
+    document.title = 'To Do App | Christel Chan';
+
     return (
       <div className='to-do-app'>
         <h1>To Do App</h1>

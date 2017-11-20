@@ -26,7 +26,7 @@ class ToDoList extends React.Component {
         <h2>To Do List</h2>
         <ul>
           {this.props.toDoList.length < 1 &&
-            <p className='nothing'>Nothing here yet</p>
+            <p className='nothing'>Hurray! You have nothing to do!</p>
           }
           {this.props.toDoList.map((toDoListItem) =>
             <li key= {toDoListItem}>
