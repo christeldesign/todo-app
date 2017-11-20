@@ -40,11 +40,11 @@ class ToDoApp extends React.Component {
     return (
       <div class='to-do-app'>
         <h1>To Do App</h1>
-        <label>To Do Item:</label>
-          <input type="text"
+        <p class='instructions'>Enter To Do Items in the field below, and click "Add" to add it to your list. When you have completed an item, delete it by checking off the checkbox.</p>
+        <input type='text'
                  value={this.state.value}
                  onChange={this.handleChange} />
-        <button onClick={this.handleSubmit}>Add to List</button>
+        <button onClick={this.handleSubmit}>Add</button>
 
         <ToDoList
           toDoList = {this.state.toDoList}

@@ -22,12 +22,12 @@ class ToDoList extends React.Component {
 
   render () {
     return (
-      <div>
+      <div class='to-do-list'>
         <h2>To Do List:</h2>
         <ul>
           {this.props.toDoList.map((toDoListItem) =>
             <li key= {toDoListItem}>
-              <input type="checkbox"
+              <input type='checkbox'
                      name={toDoListItem}
                      onChange={this.handleDelete} />
               {toDoListItem}

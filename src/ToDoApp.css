@@ -1,11 +1,30 @@
 
 .to-do-app {
   width: 25em;
+  min-height: 50vh;
   margin: 0 auto;
-  background-color: white;
-  border-radius: 10px;
   padding: 2em 3em;
+  margin-top: 1em;
+  background-color: white;
+}
+
+.to-do-list {
+  width: 95%;
+  margin: 0 auto;
   margin-top: 2em;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.2em;
+}
+
+.instructions {
+  color: grey;
+  font-style: italic;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 1.5em;
 }
 
 label {
@@ -16,19 +35,52 @@ label {
 
 input[type='text'] {
   height: 2em;
-  padding: 5px 7px;
-  position: relative;
-  bottom: 3px;
-  width: 20em;
-  margin-right: 1em;
+  padding: 5px 10px;
+  width: 16em;
+  margin-right: 0.5em;
+  font-size: 1.1em;
+  color: grey;
+}
+
+input[type='text']:focus {
+  outline: 1px solid salmon;
 }
 
 button {
-  padding: 0.3em;
-  font-size: 1.2em;
+  background-color: salmon;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.8em 1.3em;
+  font-size: 1.1em;
   margin: 0 auto;
+  border-radius: 0;
+  border: none;
 }
 
 ul {
   list-style-type: none;
+  padding-left: 0;
+  line-height: 2.3;
+  font-size: 1.2em;
+}
+
+li {
+  border-bottom: 1px solid lightgrey;
+}
+
+input[type='checkbox']{
+  margin-right: 1.5em;
+  margin-left: 1em;
+  position: relative;
+  bottom: 2px;
+  transform: scale(1.8);
+}
+
+input[type='checkbox']:after {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 10px;
+  border: 1px solid salmon;
+  background-color: white;
 }
