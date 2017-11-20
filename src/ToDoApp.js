@@ -28,9 +28,13 @@ class ToDoApp extends React.Component {
   handleSubmit (event) {
     this.setState({ value: event.target.value });
     event.preventDefault();
+
     // If input is empty...
     if (this.state.value === '') {
-      this.setState({ errorMessage: 'Please enter an item to add to your To Do List' })
+      this.setState({ errorMessage: 'Please enter an item to add to your To Do List.' })
+    } else if (this.state.toDoList.indexOf(this.state.value) >= 0) {
+      // If input value has already been used, send error message (since using this as key, has to be unique)
+      this.setState({ errorMessage: 'Oops! This item already exists, try again.'});
     } else {
       // Erase error message...
       this.setState({ errorMessage: '' });
