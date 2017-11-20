@@ -20,9 +20,7 @@ class ToDoList extends React.Component {
     this.setState({ toDoList: this.props.ToDoList });
   }
 
-
   render () {
-
     return (
       <div className='to-do-list'>
         <h2>To Do List</h2>
