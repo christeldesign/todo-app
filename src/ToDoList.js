@@ -5,19 +5,12 @@ class ToDoList extends React.Component {
   constructor (props) {
     super(props);
 
-    // Bind function..
-    this.handleDelete = this.handleDelete.bind(this);
+    this.delete = this.delete.bind(this);
   }
 
   // Function to handle deleting item
-  handleDelete (event) {
-    const target = event.target;
-    // Get index of list item in array
-    const index = this.props.toDoList.indexOf(target.name);
-    // Remove list item from array
-    this.props.toDoList.splice(index, 1);
-    // Set state to correct list array
-    this.setState({ toDoList: this.props.ToDoList });
+  delete (itemToDelete) {
+    this.props.delete(itemToDelete);
   }
 
   render () {
@@ -25,17 +18,18 @@ class ToDoList extends React.Component {
       <div className='to-do-list'>
         <h2>To Do List</h2>
         <ul>
-          {this.props.toDoList.length < 1 &&
+          {this.props.list.length < 1 &&
             <p className='nothing'>Hurray! You have nothing to do!</p>
           }
-          {this.props.toDoList.map((toDoListItem) =>
-            <li key= {toDoListItem}>
-              <input type='checkbox'
-                     name={toDoListItem}
-                     onChange={this.handleDelete} />
-              {toDoListItem}
-            </li>
-          )}
+          {this.props.list.map((toDoListItem) => {
+            return (
+              <li key= {toDoListItem}>
+                <input type='checkbox' onChange={(e) => this.delete(toDoListItem, e)} />
+                {toDoListItem}
+              </li>
+            );
+          })
+          }
         </ul>
       </div>
     )
