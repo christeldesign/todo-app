@@ -50,7 +50,9 @@ class ToDoInput extends React.Component {
     // Remove item to delete from array
     toDoItems.splice(index, 1);
     // Set state to rerender
-    this.setState({ toDoList: toDoItems });
+    this.setState({
+      toDoList: toDoItems,
+      errorMessage: '' });
   }
 
   render () {
