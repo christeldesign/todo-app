@@ -16,7 +16,6 @@ class ToDoInput extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
-
   }
 
   // Function to attach input value to state
@@ -56,7 +55,6 @@ class ToDoInput extends React.Component {
   }
 
   render () {
-
     return (
       <div className='to-do-input'>
         <p className='error-message'>{this.state.errorMessage}</p>
